@@ -1,0 +1,32 @@
+---js
+{
+  title: "My page title",
+  currentDate: function() {
+    // You can have a JavaScript function here!
+    return (new Date()).toLocaleString();
+  },
+  thelog: function() {
+    const fs = require('fs');
+    let itemsOut
+
+    itemsOut = fs.readdirSync("/")
+
+    return itemsOut.join(",\n")
+  }
+}
+---
+<!doctype html>
+<html>
+<head>
+<title>{{ title }}</title>
+</head>
+<body>
+  <h1>{{ title }}</h1>
+  <p>Published on {{ currentDate() }}</p>
+
+  <pre>
+{{ thelog() }}
+  </pre>
+  <!-- … -->
+</body>
+</html>

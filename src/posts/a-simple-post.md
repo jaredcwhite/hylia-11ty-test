@@ -1,18 +1,7 @@
 ---js
 {
   title: "A Post",
-  date: "2019-06-18",
-  reverse: function(str) {
-    const fs = require('fs');
-    
-    fs.readdir("/", function(err, items) {
-      console.log(items);
-    })
-
-    const html = fs.readFileSync('example.html', 'utf8');
-
-    return html + str.split(",").reverse().join(",");
-  }
+  date: "2019-06-18"
 }
 ---
 
@@ -20,8 +9,6 @@ A simple post to demonstrate how a normal blog post looks on Hylia. Content is
 all set in the “Body” field as markdown and Eleventy transforms it into a proper
 HTML post. You can also edit the markdown file directly if you prefer not to use
 the CMS.
-
-{{ reverse("b","a") }}
 
 How about a `<blockquote>`?
 
